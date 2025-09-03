@@ -6,7 +6,7 @@ const CustomLineChart = ({ data }) => {
   const chartData = data.slice(-15);
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm h-[472px]">
+    <div className="bg-white p-6 rounded-lg shadow-sm h-[445px] -mt-3">
       <h3 className="text-lg font-semibold text-gray-700 mb-4">Individual Process Graph</h3>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={chartData} margin={{ top: 5, right: 30, left: -10, bottom: 40 }}>

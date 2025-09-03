@@ -16,8 +16,8 @@ const CycleTable = ({ data }) => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm mt-6">
-      <div className="flex justify-between items-center mb-4">
+    <div className="bg-white p-6 rounded-lg shadow-sm mt-4">
+      <div className="flex justify-between items-center mb-4 -mt-2">
         <h3 className="text-lg font-semibold text-gray-700">Cycle Monitor</h3>
         <div className='flex items-center space-x-4'>
             <p className="text-sm text-gray-500">Current Output: #{data.length > 0 ? data[0].output_no || 0 : 0}</p>
