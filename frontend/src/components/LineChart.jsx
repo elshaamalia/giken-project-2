@@ -6,7 +6,7 @@ const CustomLineChart = ({ data }) => {
   const chartData = data.slice(-15);
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm h-[445px] -mt-3">
+    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 h-[400px] -mt-3">
       <h3 className="text-lg font-semibold text-gray-700 mb-4">Individual Process Graph</h3>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={chartData} margin={{ top: 5, right: 30, left: -10, bottom: 40 }}>
@@ -20,7 +20,7 @@ const CustomLineChart = ({ data }) => {
             interval="preserveStartEnd"
           />
           <YAxis 
-            domain={[0, 60]} 
+            domain={[0, 10]} 
             tick={{ fontSize: 12, fill: '#6B7280' }}
             tickCount={11} // <-- Diubah menjadi 11
             // Opsional: tambahkan interval agar label tidak menumpuk jika terlalu rapat

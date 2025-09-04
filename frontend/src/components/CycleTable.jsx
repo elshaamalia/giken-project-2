@@ -16,8 +16,8 @@ const CycleTable = ({ data }) => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm mt-4">
-      <div className="flex justify-between items-center mb-4 -mt-2">
+    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 mt-4">
+      <div className="flex justify-between items-center mb-4 -mt-4">
         <h3 className="text-lg font-semibold text-gray-700">Cycle Monitor</h3>
         <div className='flex items-center space-x-4'>
             <p className="text-sm text-gray-500">Current Output: #{data.length > 0 ? data[0].output_no || 0 : 0}</p>
@@ -34,7 +34,7 @@ const CycleTable = ({ data }) => {
         </div>
       </div>
 
-      <div className="h-[260px] overflow-auto border border-gray-200 rounded-md">
+      <div className="h-[200px] overflow-auto border border-gray-200 rounded-md -mt-2">
         <table className="w-full text-base text-left text-gray-600">
           <thead className="text-base text-gray-500 uppercase bg-gray-50 sticky top-0 z-10">
             <tr>
@@ -51,16 +51,15 @@ const CycleTable = ({ data }) => {
           <tbody className="bg-white">
             {data.length > 0 ? (
                 data.map((item) => (
-                <tr key={item.id || item.start_time} className="border-b last:border-b-0 hover:bg-gray-50">
-                    <td className="px-6 py-2">{item.start_time}</td>
-                    <td className="px-6 py-2">{item.end_time || '...'}</td>
-                    <td className="px-6 py-2">{item.screw > 0 ? `${parseFloat(item.screw).toFixed(2)}` : '...'}</td>
-                    <td className="px-6 py-2">{item.function > 0 ? `${parseFloat(item.function).toFixed(2)}` : '...'}</td>
-                    {/* --- PERUBAHAN DI SINI --- */}
-                    <td className="px-6 py-2">{item.label > 0 ? `${parseFloat(item.label).toFixed(2)}` : '...'}</td>
-                    <td className="px-6 py-2">{item.cycle_time > 0 ? `${parseFloat(item.cycle_time).toFixed(2)}` : '...'}</td>
-                    <td className="px-6 py-2">{item.output_no || '...'}</td>
-                    <td className="px-6 py-2">{getStatusBadge(item.status)}</td>
+                <tr key={item.id || item.start_time} className="border-b last:border-b-0 hover:bg-gray-50 ">
+                    <td className="px-6 ">{item.start_time}</td>
+                    <td className="px-6">{item.end_time || '...'}</td>
+                    <td className="px-6">{item.screw > 0 ? `${parseFloat(item.screw).toFixed(2)}` : '...'}</td>
+                    <td className="px-6">{item.function > 0 ? `${parseFloat(item.function).toFixed(2)}` : '...'}</td>
+                    <td className="px-6">{item.label > 0 ? `${parseFloat(item.label).toFixed(2)}` : '...'}</td>
+                    <td className="px-6">{item.cycle_time > 0 ? `${parseFloat(item.cycle_time).toFixed(2)}` : '...'}</td>
+                    <td className="px-6">{item.output_no || '...'}</td>
+                    <td className="px-6">{getStatusBadge(item.status)}</td>
                 </tr>
                 ))
             ) : (

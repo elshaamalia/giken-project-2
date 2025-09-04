@@ -17,7 +17,7 @@ const Header = ({ isConnected }) => {
   return (
     <header className="flex justify-between items-center p-4 bg-white shadow-sm">
       <div>
-        <img src={gikenLogo} alt="GIKEN Logo" className="h-16 ml-6" /> 
+        <img src={gikenLogo} alt="GIKEN Logo" className="h-12 ml-6" /> 
       </div>
       <div className="flex items-center space-x-4 text-base text-gray-600 mr-4">
         <div className="flex items-center space-x-2">

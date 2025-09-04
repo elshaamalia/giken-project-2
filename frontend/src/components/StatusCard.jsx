@@ -71,7 +71,7 @@ const StatusCard = ({ title, value, status }) => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm flex justify-between items-center h-[98px] -mt-2">
+    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex justify-between items-center h-[85px] -mt-2">
       <div>
         {/* --- PERUBAHAN DI SINI --- */}
         <p className="text-base font-semibold text-gray-500 uppercase">{title}</p>

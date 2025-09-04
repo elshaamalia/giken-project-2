@@ -177,7 +177,7 @@ const History = () => {
                 <th className="px-6 py-3">Function</th>
                 <th className="px-6 py-3">Label</th>
                 <th className="px-6 py-3">Cycle Time</th>
-                <th className="px-6 py-3">Output Number</th>
+                <th className="px-6 py-3">Output No</th>
                 <th className="px-6 py-3">Status</th>
               </tr>
             </thead>
@@ -191,7 +191,6 @@ const History = () => {
                   <td className="px-6 py-4">{item.end_time || '-'}</td>
                   <td className="px-6 py-4">{item.screw ? parseFloat(item.screw).toFixed(2) + 's' : '-'}</td>
                   <td className="px-6 py-4">{item.function ? parseFloat(item.function).toFixed(2) + 's' : '-'}</td>
-                  {/* --- PERUBAHAN 2: Tampilkan data item.label --- */}
                   <td className="px-6 py-4">{item.label ? parseFloat(item.label).toFixed(2) + 's' : '-'}</td>
                   <td className="px-6 py-4">{item.cycle_time ? parseFloat(item.cycle_time).toFixed(2) + 's' : '-'}</td>
                   <td className="px-6 py-4">{item.output_no || '-'}</td>
